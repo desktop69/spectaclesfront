@@ -6,10 +6,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SpectacleComponent } from './spectacle/spectacle.component';
 import { HttpClientModule } from '@angular/common/http';
+import { AddSpectacleComponent } from './add-spectacle/add-spectacle.component';
+import { UpdateSpectacleComponent } from './update-spectacle/update-spectacle.component';
 @NgModule({
   declarations: [
     AppComponent,
-    SpectacleComponent
+    SpectacleComponent,
+    AddSpectacleComponent,
+    UpdateSpectacleComponent
   ],
   imports: [
     BrowserModule,

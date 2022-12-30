@@ -18,6 +18,16 @@ chargerSpectacles (){
   })
 }
 
+supprimerspectacle(spec: Spectacle) {
+  // console.log(p);
+  let conf = confirm(" Etes-vous sure ?");
+  if (conf)
+    this.specServices.supprimerSpectacle(spec.id).subscribe( ()=>{
+      console.log("pays supprimé");
+      this.chargerSpectacles();
+    })
+  }
+
   ngOnInit(): void {
     this.chargerSpectacles();
   }

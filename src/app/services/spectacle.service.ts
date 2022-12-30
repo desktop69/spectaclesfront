@@ -11,7 +11,7 @@ const httpOptions = {
 export class SpectacleService {
   specacles: Spectacle[];
   spectacle!: Spectacle;
-  apiURL: string = 'http://localhost:8090/Spectacle/api/';
+  apiURL: string = 'http://localhost:8090/Spectacle/api';
 
   constructor(private http: HttpClient,) {
     this.specacles = [];
@@ -34,7 +34,7 @@ export class SpectacleService {
     return this.http.get<Spectacle>(url);
   }
 
-  updateProduit(spec: Spectacle): Observable<Spectacle> {
+  updateSpectacle(spec: Spectacle): Observable<Spectacle> {
     return this.http.put<Spectacle>(this.apiURL, spec, httpOptions);
   }
 
