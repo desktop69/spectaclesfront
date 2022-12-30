@@ -1,0 +1,30 @@
+<div class="container">
+    <h1>Liste of spectacles 
+    </h1>
+    <div class="card shadow mb-4">
+        <div class="card-body">
+            <table class="table table-striped">
+                <tr>
+                    <th>Id spectacles</th>
+                    <th>Nom du spectacles</th>
+                    <th>adresse de spectacles</th>
+                    <th> description</th>
+                    <th> dateCreation</th>
+                </tr>
+                <tbody *ngFor="let spect of spectacles">
+                    <tr>
+                        <td>{{spect.id}}</td>
+                        <td>{{spect.noms}}</td>
+                        <td>{{spect.adresse}}</td>
+                        <td> {{ spect.description}} </td>
+                        <td> {{ spect.dateCreation}} </td>
+                       
+                    </tr>
+                </tbody>
+                <div class="d-flex align-items-end flex-column">
+                   
+                </div>
+            </table>
+        </div>
+    </div>
+</div>
