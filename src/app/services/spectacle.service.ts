@@ -13,7 +13,7 @@ export class SpectacleService {
   spectacle!: Spectacle;
   apiURL: string = 'http://localhost:8090/Spectacle/api';
 
-  constructor(private http: HttpClient,) {
+  constructor(private http: HttpClient) {
     this.specacles = [];
   }
   LiterSpectacle(): Observable<Spectacle[]> {
@@ -38,7 +38,29 @@ export class SpectacleService {
     return this.http.put<Spectacle>(this.apiURL, spec, httpOptions);
   }
 
+  
+      /*image functions*/
+  
+      uploadImage(file : File , filename : string) {
 
+        const imageFormData = new FormData();
+        imageFormData.append('image', file, filename);
+        const url = `${this.apiURL + "/image/upload"}`
+        return this.http.post(url ,imageFormData)
+      }
+    
+    
+      loadImage(id : number) {
+  
+        const url = `${this.apiURL + "/image/get/info"}/${id}`
+        return this.http.get(url) ;
+      }
+    
+      deleteImage(idImage : number) {
+        const url = `${this.apiURL + "/image/delete"}/${idImage}`
+        return this.http.delete(url)
+      }
+      /******************* */
 
 
 }

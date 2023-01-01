@@ -12,8 +12,10 @@
                     <th> description</th>
                     <th> date de spectacles</th>
                 </tr>
-                <tbody *ngFor="let spect of spectacles">
+                <tbody *ngFor="let spect of spectacles ; let i = index">
                     <tr>
+
+
                         <td>{{spect.id}}</td>
                         <td>{{spect.noms}}</td>
                         <td>{{spect.adresse}}</td>

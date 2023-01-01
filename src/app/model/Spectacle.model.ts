@@ -1,3 +1,4 @@
+import { Image } from "./image.model";
 export class Spectacle {
     id !: number
     noms!: string
@@ -6,4 +7,5 @@ export class Spectacle {
     description!: string
     imagePath!: string
     dateCreation!: Date
+    image! : Image;
 }
